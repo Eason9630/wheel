@@ -52,7 +52,8 @@ class wheelUIImage: UIImageView {
         percentageLable.frame = CGRect(x: 0, y: 0, width: 30, height: 20)
         percentageLable.position = textPath.currentPoint
         // 根據文字所在角度計算旋轉角度
-        let rotationAngle = aDegree * textCenterDegree
+        let labelDegree = textCenterDegree - 270
+        let rotationAngle = aDegree * labelDegree
         // 將旋轉運用在圖片上
         percentageLable.transform = CATransform3DMakeRotation(rotationAngle, 0, 0, 1)
         return percentageLable
